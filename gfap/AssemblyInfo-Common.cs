@@ -7,9 +7,9 @@ using System.Reflection;
 [assembly: AssemblyConfiguration("Release")]
 #endif
 
-[assembly: AssemblyCompany("G2 Speech B.V.")]
+[assembly: AssemblyCompany("Wigy open-source developer")]
 [assembly: AssemblyProduct("gfap")]
-[assembly: AssemblyCopyright("Copyright © G2 Speech B.V. 2015")]
+[assembly: AssemblyCopyright("Copyright © Wigy 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Wigy.Gfap.Core.Branch">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="_revisions" Hidden="true" />
+      <Method Name="Branch" Hidden="true" />
+    </Members>
+    <AssociationLine Name="BasedOn" Type="Wigy.Gfap.Core.Branch" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="1.5" />
+        <Point X="4.25" Y="1.125" />
+        <Point X="3.375" Y="1.125" />
+        <Point X="3.375" Y="1.938" />
+        <Point X="3.75" Y="1.938" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.45" Y="0.87" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAEAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Branch.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BasedOn" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Revisions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wigy.Gfap.Core.Revision">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Branch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wigy.Gfap.Core.BuildProject">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Branch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wigy.Gfap.Core.Build">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="Build" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Branch.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Project" />
+      <Property Name="Revision" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
