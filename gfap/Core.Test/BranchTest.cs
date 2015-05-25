@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Wigy.Gfap.Core.Test
 {
-    class BranchTest
+    public class BranchTest
     {
         private readonly BuildProject _project;
         private readonly Revision _revision;
