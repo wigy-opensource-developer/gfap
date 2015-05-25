@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Wigy.Gfap.Core
 {
@@ -29,6 +30,10 @@ namespace Wigy.Gfap.Core
     {
         public Build(BuildProject project, Revision revision)
         {
+            if (project == null)
+                throw new ArgumentNullException(nameof(project));
+            if (revision == null)
+                throw new ArgumentNullException(nameof(revision));
             Project = project;
             Revision = revision;
         }
