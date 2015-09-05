@@ -3,19 +3,34 @@ using Xunit;
 
 namespace Wigy.Gfap.Core.Test
 {
-    public class BranchTest
+    public class RevisionConstructorTest
+    {
+        public RevisionConstructorTest()
+        {
+        }
+
+        [Fact]
+        void NumberedRevisionToString()
+        {
+            var revision = Revision.Number(46564);
+
+            Assert.Equal(revision.ToString(), "r46564");
+        }
+    }
+
+    public class BuildConstructorTest
     {
         private readonly BuildProject _project;
         private readonly Revision _revision;
 
-        public BranchTest()
+        public BuildConstructorTest()
         {
             _project = new BuildProject();
-            _revision = new Revision();
+            _revision = Revision.Number(5);
         }
 
         [Fact]
-        void BuildConstructor()
+        void SetsProjectAndRevision()
         {
             var build = new Build(_project, _revision);
 

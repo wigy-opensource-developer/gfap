@@ -18,8 +18,21 @@ namespace Wigy.Gfap.Core
         public IEnumerable<Revision> Revisions => _revisions;
     }
 
-    public class Revision
+    public abstract class Revision
     {
+        public static Revision Number(int r) => new NumberRevision(r);
+
+        private class NumberRevision : Revision
+        {
+            private readonly int _number;
+
+            public NumberRevision(int number)
+            {
+                _number = number;
+            }
+
+            public override string ToString() => $"r{_number}";
+        }
     }
 
     public class BuildProject
