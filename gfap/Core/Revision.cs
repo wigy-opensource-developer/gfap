@@ -18,7 +18,8 @@ namespace Wigy.Gfap.Core
 
             public new int Number { get; }
 
-            public override string ToString() => $"r{Number}";
+            public override string ToString()
+                => $"r{Number}";
 
             int IComparable<Numbered>.CompareTo(Numbered other)
                 => Number.CompareTo(other.Number);

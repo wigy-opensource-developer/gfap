@@ -27,10 +27,12 @@ namespace Wigy.Gfap.Core.Test
         [Fact]
         void RevisionCanBeAddedTwice()
         {
-            _branch.Add(_revision);
-            _branch.Add(_revision);
+            var first = _branch.Add(_revision);
+            var second = _branch.Add(_revision);
 
             Assert.Equal(1, _branch.Revisions.Count());
+            Assert.True(first);
+            Assert.False(second);
         }
 
 

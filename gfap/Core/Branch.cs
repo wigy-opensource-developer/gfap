@@ -15,12 +15,11 @@ namespace Wigy.Gfap.Core
 
         public Branch BasedOn { get; }
 
-        public IEnumerable<Revision.Numbered> Revisions => _revisions;
+        public IEnumerable<Revision.Numbered> Revisions
+            => _revisions;
 
-        public void Add(Revision.Numbered revision)
-        {
-            _revisions.Add(revision);
-        }
+        public bool Add(Revision.Numbered revision)
+            => _revisions.Add(revision);
     }
 
 }
