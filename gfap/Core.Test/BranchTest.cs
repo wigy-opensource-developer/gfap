@@ -5,16 +5,24 @@ namespace Wigy.Gfap.Core.Test
 {
     public class RevisionConstructorTest
     {
-        public RevisionConstructorTest()
-        {
-        }
-
         [Fact]
         void NumberedRevisionToString()
         {
             var revision = Revision.Number(46564);
 
-            Assert.Equal(revision.ToString(), "r46564");
+            Assert.Equal("r46564", revision.ToString());
+        }
+    }
+
+    public class BuildProjectConstructorTest
+    {
+        [Fact]
+        void SetsProjectName()
+        {
+            const string NAME = "Trunk unit tests";
+            var buildProject = new BuildProject(NAME);
+
+            Assert.Equal(NAME, buildProject.Name);
         }
     }
 
@@ -25,7 +33,7 @@ namespace Wigy.Gfap.Core.Test
 
         public BuildConstructorTest()
         {
-            _project = new BuildProject();
+            _project = new BuildProject("Project");
             _revision = Revision.Number(5);
         }
 

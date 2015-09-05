@@ -37,6 +37,12 @@ namespace Wigy.Gfap.Core
 
     public class BuildProject
     {
+        public BuildProject(string name)
+        {
+            Name = name;
+        }
+
+        public string Name { get; }
     }
 
     public class Build
