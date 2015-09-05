@@ -24,14 +24,16 @@ namespace Wigy.Gfap.Core
 
         private class NumberRevision : Revision
         {
-            private readonly int _number;
-
             public NumberRevision(int number)
             {
-                _number = number;
+                if (number <= 0)
+                    throw new ArgumentException(nameof(number));
+                Number = number;
             }
 
-            public override string ToString() => $"r{_number}";
+            public new int Number { get; }
+
+            public override string ToString() => $"r{Number}";
         }
     }
 
@@ -39,6 +41,8 @@ namespace Wigy.Gfap.Core
     {
         public BuildProject(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException(nameof(name));
             Name = name;
         }
 

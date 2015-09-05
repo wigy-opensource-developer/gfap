@@ -12,6 +12,18 @@ namespace Wigy.Gfap.Core.Test
 
             Assert.Equal("r46564", revision.ToString());
         }
+
+        [Fact]
+        void NumberIsNotZero()
+        {
+            Assert.Throws<ArgumentException>(() => Revision.Number(0));
+        }
+
+        [Fact]
+        void NumberIsNotNegative()
+        {
+            Assert.Throws<ArgumentException>(() => Revision.Number(-5));
+        }
     }
 
     public class BuildProjectConstructorTest
@@ -23,6 +35,18 @@ namespace Wigy.Gfap.Core.Test
             var buildProject = new BuildProject(NAME);
 
             Assert.Equal(NAME, buildProject.Name);
+        }
+
+        [Fact]
+        void NameIsNotNull()
+        {
+            Assert.Throws<ArgumentException>(() => new BuildProject(null));
+        }
+
+        [Fact]
+        void NameIsNotJustWhitespace()
+        {
+            Assert.Throws<ArgumentException>(() => new BuildProject(" \t\r\n"));
         }
     }
 
