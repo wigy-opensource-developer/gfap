@@ -42,6 +42,7 @@
       <Link>Properties\AssemblyInfo-Common.cs</Link>
     </Compile>
     <Compile Include="BranchConstructorTest.cs" />
+    <Compile Include="BranchTest.cs" />
     <Compile Include="BuildConstructorTest.cs" />
     <Compile Include="BuildProjectConstructorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

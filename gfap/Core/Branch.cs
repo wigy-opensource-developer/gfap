@@ -1,20 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Wigy.Gfap.Core
 {
     public class Branch
     {
-        private readonly ISet<Revision> _revisions;
+        private readonly ISet<Revision.Numbered> _revisions;
 
         public Branch(Branch basedOn)
         {
             BasedOn = basedOn;
-            _revisions = new SortedSet<Revision>();
+            _revisions = new SortedSet<Revision.Numbered>();
         }
 
         public Branch BasedOn { get; }
 
-        public IEnumerable<Revision> Revisions => _revisions;
+        public IEnumerable<Revision.Numbered> Revisions => _revisions;
+
+        public void Add(Revision.Numbered revision)
+        {
+            _revisions.Add(revision);
+        }
     }
 
 }

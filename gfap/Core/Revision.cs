@@ -4,11 +4,12 @@ namespace Wigy.Gfap.Core
 {
     public abstract class Revision
     {
-        public static Revision Number(int r) => new NumberRevision(r);
+        public static Numbered Number(int r)
+            => new Numbered(r);
 
-        private class NumberRevision : Revision
+        public class Numbered : Revision, IComparable<Numbered>
         {
-            public NumberRevision(int number)
+            public Numbered(int number)
             {
                 if (number <= 0)
                     throw new ArgumentException(nameof(number));
@@ -18,6 +19,9 @@ namespace Wigy.Gfap.Core
             public new int Number { get; }
 
             public override string ToString() => $"r{Number}";
+
+            int IComparable<Numbered>.CompareTo(Numbered other)
+                => Number.CompareTo(other.Number);
         }
     }
 }
