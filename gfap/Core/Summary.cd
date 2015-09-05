@@ -30,27 +30,30 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Wigy.Gfap.Core.Revision">
-    <Position X="3.75" Y="2.75" Width="1.5" />
+    <Position X="3.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Branch.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Revision.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wigy.Gfap.Core.BuildProject">
     <Position X="6.5" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="BuildProject" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Branch.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuildProject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Wigy.Gfap.Core.Build">
-    <Position X="6.5" Y="2.75" Width="1.5" />
+    <Position X="6.5" Y="3.25" Width="1.5" />
     <Members>
       <Method Name="Build" Hidden="true" />
     </Members>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Branch.cs</FileName>
+      <FileName>Build.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Project" />

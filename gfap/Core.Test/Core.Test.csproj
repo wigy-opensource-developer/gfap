@@ -41,8 +41,10 @@
     <Compile Include="..\AssemblyInfo-Common.cs">
       <Link>Properties\AssemblyInfo-Common.cs</Link>
     </Compile>
-    <Compile Include="BranchTest.cs" />
+    <Compile Include="BuildConstructorTest.cs" />
+    <Compile Include="BuildProjectConstructorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevisionConstructorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
